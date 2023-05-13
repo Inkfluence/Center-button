@@ -1,0 +1,54 @@
+.pushable {
+    background: hsl(340deg 100% 32%);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    display:flow-root;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(28, 100%, 50%);
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .pushable:active .front {
+    /* transform: translateY(-10px); */
+    transition: transform 34ms;
+    transform: translate(0, 0.3rem);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .front {
+        transition:
+          transform
+          600ms
+          cubic-bezier(.3, .7, .4, 1);
+    }
+
+    .whole{
+justify-content: center;
+align-items: center;
+height: 500px;
+display: flex;
+position:relative;
+    }
